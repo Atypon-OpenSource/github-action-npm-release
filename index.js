@@ -15,7 +15,7 @@ async function main() {
 
   // 1. Get the current version
   let {version: newVersion} = __non_webpack_require__(pathJoin(core.getInput('path'), 'package.json'));
-  newVersion = core.getInput('tag_prefix') || "UI-Renderer-V" + newVersion;
+  newVersion = core.getInput('tag_prefix') || "" + newVersion;
   core.info(`New version: ${newVersion}`);
 
   // 2. Get the latest release version and hash
